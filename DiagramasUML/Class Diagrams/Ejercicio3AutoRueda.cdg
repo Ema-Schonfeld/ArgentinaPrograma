@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio3AutoRueda">
+  <ClassDiagramComponents>
+    <Class name="Auto" package="" visibility="public" xPosition="13.0" yPosition="11.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="patente" type="String" visibility="private"/>
+        <Field name="combustible" type="Double" visibility="private"/>
+        <Field name="rueda1" type="Rueda" visibility="private"/>
+        <Field name="rueda2" type="Rueda" visibility="private"/>
+        <Field name="rueda3" type="Rueda" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Double" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="avanzar" returnType="double" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="retroceder" returnType="double" visibility="public">
+          <Argument type="double" name="metros"/>
+        </Method>
+        <Method name="llenarTanque" returnType="void" visibility="public"/>
+        <Method name="geoColor" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rueda" package="" visibility="public" xPosition="418.0" yPosition="68.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="presion" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="inflar" returnType="void" visibility="public"/>
+        <Method name="pinchar" returnType="void" visibility="public"/>
+        <Method name="desinflar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Auto" target="Rueda" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

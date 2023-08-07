@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio2 - Kiosco y Empleado">
+  <ClassDiagramComponents>
+    <Class name="Kiosco" package="" visibility="public" xPosition="20.0" yPosition="60.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="cuit" type="Int" visibility="private"/>
+        <Field name="empleado1" type="Empleado" visibility="private"/>
+        <Field name="empleado2" type="Empleado" visibility="private"/>
+        <Field name="empleado3" type="Empleado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="Int" name="cuit"/>
+          <Argument type="Empleado" name="empleado1"/>
+          <Argument type="Empleado" name="empleado2"/>
+          <Argument type="Empleado" name="empleado3"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="EmpleadoMayor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Empleado" package="" visibility="public" xPosition="279.0" yPosition="396.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="fecha" type="LocalDate" visibility="private"/>
+        <Field name="dni" type="Int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Kiosco" target="Empleado" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

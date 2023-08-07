@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio3-Guia4">
+  <ClassDiagramComponents>
+    <Interface name="calculosFormas" package="" visibility="public" xPosition="308.0" yPosition="97.0">
+      <Methods>
+        <Method name="calcularArea" returnType="void" visibility="public"/>
+        <Method name="calcularPerimetro" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Rectangulo" package="" visibility="public" xPosition="168.0" yPosition="299.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Circulo" package="" visibility="public" xPosition="440.0" yPosition="299.0">
+      <Fields>
+        <Field name="pi" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Rectangulo" target="calculosFormas"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Circulo" target="calculosFormas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

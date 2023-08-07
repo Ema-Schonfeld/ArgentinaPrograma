@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio2-Guia4">
+  <ClassDiagramComponents>
+    <Class name="Viaje" package="" visibility="public" xPosition="870.0" yPosition="180.0">
+      <Fields>
+        <Field name="lugarOrigen" type="String" visibility="private"/>
+        <Field name="lugarDestino" type="String" visibility="private"/>
+        <Field name="distancia" type="double" visibility="private"/>
+        <Field name="vehiculo" type="Vehiculo" visibility="private"/>
+        <Field name="peaje" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="lugarOrigen"/>
+          <Argument type="String" name="lugarDestino"/>
+          <Argument type="double" name="distancia"/>
+          <Argument type="int" name="peaje"/>
+          <Argument type="Vehiculo" name="vehiculo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularDistancia" returnType="double" visibility="public"/>
+        <Method name="calcularPeaje" returnType="double" visibility="public"/>
+        <Method name="calcularCombustible" returnType="double" visibility="public"/>
+        <Method name="calcularTotal" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="" visibility="public" xPosition="450.0" yPosition="253.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="protected"/>
+        <Field name="patente" type="String" visibility="protected"/>
+        <Field name="combustible" type="Combustible" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CalcularCostoDelCombustible" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Combustible" package="" visibility="public" xPosition="36.0" yPosition="262.0">
+      <Fields>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="tipoDeCombustible" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="precio"/>
+          <Argument type="String" name="tipoDeCombustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Auto" package="" visibility="public" xPosition="183.0" yPosition="534.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CalcularCostoDelCombustible" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camion" package="" visibility="public" xPosition="383.0" yPosition="669.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CalcularCostoDelCombustible" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Camioneta" package="" visibility="public" xPosition="608.0" yPosition="534.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="patente"/>
+          <Argument type="Combustible" name="combustible"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="CalcularCostoDelCombustible" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="tiene" source="Viaje" target="Vehiculo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Camion" target="Vehiculo"/>
+    <IsRelation name="is" source="Camioneta" target="Vehiculo"/>
+    <IsRelation name="is" source="Auto" target="Vehiculo"/>
+    <HasRelation name="tiene" source="Vehiculo" target="Combustible" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

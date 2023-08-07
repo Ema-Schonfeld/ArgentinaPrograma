@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio4-Guia4">
+  <ClassDiagramComponents>
+    <Class name="Posicion" package="" visibility="public" xPosition="101.0" yPosition="144.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Personaje" package="" visibility="public" xPosition="384.0" yPosition="87.0">
+      <Fields>
+        <Field name="ubicacion" type="Posiscion" visibility="protected"/>
+        <Field name="nick" type="String" visibility="protected"/>
+        <Field name="vidas" type="int" visibility="protected"/>
+        <Field name="energia" type="int" visibility="protected"/>
+        <Field name="orientacion" type="char" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nick"/>
+          <Argument type="Posicion" name="ubicacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Disparar" returnType="void" visibility="public"/>
+        <Method name="Girar" returnType="void" visibility="public"/>
+        <Method name="Avanzar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Guerrero" package="" visibility="public" xPosition="741.0" yPosition="494.0">
+      <Fields>
+        <Field name="caballo" type="Boulean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Avanzar" returnType="void" visibility="public"/>
+        <Method name="Disparar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Guerrero" target="Personaje"/>
+    <HasRelation name="tiene" source="Personaje" target="Posicion" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
